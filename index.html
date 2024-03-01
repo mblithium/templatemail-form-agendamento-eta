@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Agendamento de Equipamentos</title>
+</head>
+<body>
+    <header>
+        <h1>Modelo de Agendamento de Equipamentos</h1>
+        <p>Agende equipamentos para este mês e gere um template para ser enviado no webmail.</p>
+    </header>
+    <form>
+        <label>Nome do Professor:</label>
+        <input type="text"> <br>
+        <label>Matéria:</label>
+        <input list="cursos-lista" required>
+        <datalist id="cursos-lista">
+            <option value="Administração"></option>
+            <option value="Eletrotécnica"></option>
+            <option value="Enfermagem"></option>
+            <option value="Farmácia"></option>
+            <option value="Instrumentação Cirúrgica"></option>
+            <option value="Informática"></option>
+            <option value="Logística"></option>
+            <option value="Portos"></option>
+            <option value="Radiologia"></option>
+            <option value="Segurança do Trabalho"></option>
+        </datalist>
+        <label>Turma:</label>
+        <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </form>
+    <button id="limparForm">Limpar Formulário</button>
+    <button id="gerarTemplate">Confirmar e Gerar template</button>
+</body>
+</html>
