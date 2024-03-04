@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Lato';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./assets/fonts/lato/Lato-Regular.ttf');
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Lato, sans-serif;
+    font-size: 1rem;
+    background-color: #4b7bec;
+    color: white;
+}
+
+
+header { 
+    text-align: center;
+    padding: 10px;
+}
+header img {
+    width: 200px;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+form label {
+    text-transform: initial;
+    cursor: pointer;
+}
+
+form {
+    width: max-content;
+    margin: 20px auto;
+    background-color: #3867d6;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+form input {
+    border: 1px transparent;
+}
+
+form input[type=text] {
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+form select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+fieldset {
+    margin: 10px 0;
+    padding: 20px 10px;
+    border: 1px solid white;
+    text-transform: uppercase;
+}
+
+#actionFormButtons {
+    margin: 10px 0;
+    text-align: right;
+}
+.actionBtn {
+    padding: 10px;
+    border: 1px solid;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.actionBtn.genTemplateBtn {
+    background-color: #20bf6b;
+    color: white;
+    border-color: transparent;
+    box-shadow: 0px 5px 0px 0px #1ba059;
+}
+
+.actionBtn.genTemplateBtn:hover {
+    background-color: #1ba059;
+    box-shadow: 0px 5px 0px 0px #167e47;
+}
+
+.actionBtn.clearBtn {
+    background-color: #778ca3;
+    border-color: transparent;
+    box-shadow: 0px 5px 0px 0px #697b8f;
+    color: white;
+}
+
+.actionBtn.clearBtn:hover {
+    background-color: #6a7d92;
+    box-shadow: 0px 5px 0px 0px #566575;
+}
+
+.actionBtn.clearBtn:active {
+    background-color: #778ca3;
+}
+
+footer {
+    text-align: center;
+}
+
+div#modalResult {
+    position: fixed;
+    display: none;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+div#modalResult .modalTitleBar {
+    text-align: right;
+}
+
+div#modalResult .modalTitleBar .modalCloseBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+}
+
+div#modalResult .modalTitleBar .modalCloseBtn:hover {
+    background-color: crimson;
+    color: white;
+}
+
+div.modalBody {
+    background-color: #3867d6;
+    width: 100%;
+    height: 100%;
+}
+
+div.modalBody > h1, p {
+    padding: 15px;
+    margin: 0;
+}
+
+#resultTemplate {
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    overflow-y: scroll;
+    color: black;
+    text-wrap: wrap;
+}

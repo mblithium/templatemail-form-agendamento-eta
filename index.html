@@ -4,38 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de Agendamento de Equipamentos</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Modelo de Agendamento de Equipamentos</h1>
-        <p>Agende equipamentos para este mês e gere um template para ser enviado no webmail.</p>
+        <img src="assets/logo-adelia.png">
+        
     </header>
-    <form>
-        <label>Nome do Professor:</label>
-        <input type="text"> <br>
-        <label>Matéria:</label>
-        <input list="cursos-lista" required>
-        <datalist id="cursos-lista">
-            <option value="Administração"></option>
-            <option value="Eletrotécnica"></option>
-            <option value="Enfermagem"></option>
-            <option value="Farmácia"></option>
-            <option value="Instrumentação Cirúrgica"></option>
-            <option value="Informática"></option>
-            <option value="Logística"></option>
-            <option value="Portos"></option>
-            <option value="Radiologia"></option>
-            <option value="Segurança do Trabalho"></option>
-        </datalist>
-        <label>Turma:</label>
-        <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+
+    <div id="modalResult">
+        <div class="modalTitleBar">
+            <button class="modalCloseBtn">x</button>
+        </div>
+        <div class="modalBody">
+            <h1>Modelo pronto!</h1>
+            <p>Confira se as informações estão corretas antes de copiar o modelo.</p>
+
+            <div id="resultTemplate"></div>
+        </div>
+    </div>
+    
+    <section>
+        <h1>Modelo de Agendamento - TI</h1>
+        <form name="TI_scheduling" action="">
+            <fieldset>
+                <legend>Professor</legend>
+
+                <label for="formTeacherName">Nome e Sobrenome</label> <br>
+                <input type="text" id="formTeacherName" required>
+            </fieldset>
+        <fieldset>
+            <legend>Curso</legend>
+            <label>Curso/Turma:</label>
+            <br>
+            <select id="formCurso">
+
+                <option selected disabled value="">Selecione</option>
+
+                <optgroup label="Fundamental">
+                    <option value="F1A1">Fundamental 1 - 1° Ano</option>
+                    <option value="F1A2">Fundamental 1 - 2° Ano</option>
+                    <option value="F1A3">Fundamental 1 - 3° Ano</option>
+                    <option value="F1A4">Fundamental 1 - 4° Ano</option>
+                    <option value="F1A5">Fundamental 1 - 5° Ano</option>
+                    <option value="F2A6">Fundamental 2 - 6° Ano</option>
+                    <option value="F2A7">Fundamental 2 - 7° Ano</option>
+                    <option value="F2A8">Fundamental 2 - 8° Ano</option>
+                    <option value="F2A9">Fundamental 2 - 9° Ano</option>
+                </optgroup>
+
+                <optgroup label="Ensino Médio">
+                    <option value="EM1">Ensino Médio - 1ª Série</option>
+                    <option value="EM2">Ensino Médio - 2ª Série</option>
+                    <option value="EM3">Ensino Médio - 3ª Série</option>
+                </optgroup>
+
+                <optgroup label="Cursos Técnicos">
+                    <option value="TADM">Técnico em Administração</option>
+                    <option value="TETC">Técnico em Eletrotécnica</option>
+                    <option value="TEFM">Técnico em Enfermagem</option>
+                    <option value="TFMA">Técnico em Farmácia</option>
+                    <option value="TIC">Técnico em Instrumentação Cirúrgica</option>
+                    <option value="TINF">Técnico em Informática</option>
+                    <option value="TLOG">Técnico em Logística</option>
+                    <option value="TPORT">Técnico em Portos</option>
+                    <option value="TRAD">Técnico em Radiologia</option>
+                    <option value="TST">Técnico em Segurança do Trabalho</option>
+                </optgroup>
+            </select>
+        
+            <br>
+
+        <label for="formSala">Sala </label> 
+        
+        <br>
+        
+        <select id="formSala">
+            <option selected disabled value="">Selecione</option>
+
+            <optgroup label="Salas">
+                <option value="01">Sala 1</option>
+                <option value="02">Sala 2</option>
+                <option value="03">Sala 3</option>
+                <option value="04">Sala 4</option>
+                <option value="05">Sala 5</option>
+                <option value="06">Sala 6</option>
+                <option value="07">Sala 7</option>
+                <option value="08">Sala 8</option>
+                <option value="09">Sala 9</option>
+                <option value="10">Sala 10</option>
+                <option value="11">Sala 11</option>
+                <option value="12">Sala 12</option>
+                <option value="13">Sala 13</option>
+                <option value="14">Sala 14</option>
+                <option value="15">Sala 15</option>
+                <option value="16">Sala 16</option>
+                <option value="17">Sala 17</option>
+                <option value="18">Sala 18</option>
+                <option value="19">Sala 19</option>
+                <option value="20">Sala 20</option>
+                <option value="21">Sala 21</option>
+                <option value="22">Sala 22</option>
+                <option value="23">Sala 23</option>
+                <option value="24">Sala 24</option>
+                <option value="25">Sala 25</option>
+                <option value="26">Sala 26</option>
+                <option value="27">Sala 27</option>
+                <option value="28">Sala 28</option>
+            </optgroup>
+
+            <optgroup label="Laboratórios de Informática">
+                <option value="lab 2">Informática 1</option>
+                <option value="lab 2">Informática 2</option>
+                <option value="lab 3">Informática 3</option>
+                <option value="lab 4">Informática 4</option>
+            </optgroup>
         </select>
-    </form>
-    <button id="limparForm">Limpar Formulário</button>
-    <button id="gerarTemplate">Confirmar e Gerar template</button>
+        <br>
+        </fieldset>
+      <fieldset>
+        <legend>Equipamentos</legend>  
+
+        <input type="checkbox" id="formCheckProjector" name="equipamentoProjetor" value="Projetor">
+        <label for="formCheckProjector">Projetor</label>
+
+        <input type="checkbox" id="formCheckNotebook" name="equipamentoNotebook" value="Notebook">
+        <label for="formCheckNotebook">Notebook</label>
+        
+        <input type="checkbox" id="formCheckSound" name="equipamentoCaixaSom" value="Caixa de Som">
+        <label for="formCheckSound">Caixa de Som</label>
+
+        <input type="checkbox" id="formCheckTela" name="equipamentoTela" value="Tela">
+        <label for="formCheckTela">Tela</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Agendamento</legend>
+        <datalist id="hoursListFirstPeriod">
+            <option value="18:05"></option>
+            <option value="20:10"></option>
+        </datalist>
+        <datalist id="hoursListSecondPeriod">
+            <option value="20:10"></option>
+            <option value="22:00"></option>
+        </datalist>
+
+        <div class="schedulingTimeForm">
+            <div class="schedulingTimeFormItem">
+                <span>
+                    <label>Dia</label>
+                    <input type="date" class="selectDate">
+                </span>
+                <span>
+                    <label>Horário</label>
+                    <input type="time" list="hoursListFirstPeriod" min="06:00" max="22:00" class="FirstPeriodTime">
+                    -
+                    <input type="time" list="hoursListSecondPeriod" class="SecondPeriodTime">
+                </span>
+            </div>
+        </div>
+      </fieldset>
+      <div id="actionFormButtons">
+        <button id="clearForm" class="actionBtn clearBtn">Limpar Formulário</button>
+        <button id="genTemplate" class="actionBtn genTemplateBtn">Confirmar e Gerar template</button>
+      </div>
+      </form>
+    </section>
+
+  <footer>
+    <div>
+        <p>Agende equipamentos para este mês e gere um modelo para ser enviado no webmail. <br>Note que essa ferramenta serve <strong><u>apenas para gerar o modelo</u></strong>, você ainda precisará copiar e enviar por e-mail.</p>
+      </div>
+  </footer>
 </body>
 </html>
