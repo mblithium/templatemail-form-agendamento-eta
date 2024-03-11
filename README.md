@@ -5,13 +5,15 @@
 - [x] Criar formulário para criação do template.
 - [x] Aplicar estilos para melhorar o visual da aplicação.
 - [x] Criar gerador de modelo com javascript.
+- [x] Remover comportamento padrão de envio de formulário (submit) para não fazer estas requisições.
+- [ ] Adicionar botão para copiar automaticamente o modelo gerado.
 - [ ] Validação para que nenhum campo obrigatório esteja em branco.
 - [ ] Consertar data para formato brasileiro.
-- [x] Remover comportamento padrão de envio de formulário (submit) para não fazer estas requisições.
 - [ ] Tornar exportável para arquivo de texto.
 - [ ] Gerar favicons com compatibilidade de navegadores e plataformas usando o [Real Favicon Generator](https://realfavicongenerator.net/).
 - [ ] Tornar "instalável" configurando a página como um PWA.
 - [ ] Criar ícone "maskable" para PWA utilizando o [Maskable.app](https://maskable.app/).
+- [ ] Backend para envio e processamento de formulário
 
 ## Licença
 
