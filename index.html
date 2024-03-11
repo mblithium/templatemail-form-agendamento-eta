@@ -32,19 +32,25 @@
                 <legend>Professor</legend>
 
                 <label for="formTeacherName">Nome e Sobrenome</label> <br>
-                <input type="text" id="formTeacherName" required>
+                <input type="text" id="formTeacherName" name="Professor" required>
             </fieldset>
         <fieldset>
             <legend>Curso</legend>
             <label>Curso/Turma:</label>
             <br>
-            <select id="formCurso">
+            <select id="formCurso" name="Curso" required>
 
                 <option selected disabled value="">Selecione</option>
 
                 <optgroup label="Fundamental">
-                    <option value="F1A1">Fundamental 1 - 1° Ano</option>
-                    <option value="F1A2">Fundamental 1 - 2° Ano</option>
+                    <option value="F1A1A">Fundamental 1 - 1° Ano A</option>
+                    <option value="F1A1B">Fundamental 1 - 1° Ano B</option>
+                    <option value="F1A1C">Fundamental 1 - 1° Ano C</option>
+                    <option value="F1A1D">Fundamental 1 - 1° Ano D</option>
+                    <option value="F1A2A">Fundamental 1 - 2° Ano A</option>
+                    <option value="F1A2B">Fundamental 1 - 2° Ano B</option>
+                    <option value="F1A2C">Fundamental 1 - 2° Ano C</option>
+                    <option value="F1A2D">Fundamental 1 - 2° Ano D</option>
                     <option value="F1A3">Fundamental 1 - 3° Ano</option>
                     <option value="F1A4">Fundamental 1 - 4° Ano</option>
                     <option value="F1A5">Fundamental 1 - 5° Ano</option>
@@ -80,7 +86,7 @@
         
         <br>
         
-        <select id="formSala">
+        <select id="formSala" name="sala">
             <option selected disabled value="">Selecione</option>
 
             <optgroup label="Salas">
@@ -126,16 +132,16 @@
       <fieldset>
         <legend>Equipamentos</legend>  
 
-        <input type="checkbox" id="formCheckProjector" name="equipamentoProjetor" value="Projetor">
+        <input type="checkbox" id="formCheckProjector" name="Projetor" value="Projetor">
         <label for="formCheckProjector">Projetor</label>
 
-        <input type="checkbox" id="formCheckNotebook" name="equipamentoNotebook" value="Notebook">
+        <input type="checkbox" id="formCheckNotebook" name="Notebook" value="Notebook">
         <label for="formCheckNotebook">Notebook</label>
         
-        <input type="checkbox" id="formCheckSound" name="equipamentoCaixaSom" value="Caixa de Som">
+        <input type="checkbox" id="formCheckSound" name="Caixa de Som" value="Caixa de Som">
         <label for="formCheckSound">Caixa de Som</label>
 
-        <input type="checkbox" id="formCheckTela" name="equipamentoTela" value="Tela">
+        <input type="checkbox" id="formCheckTela" name="Tela" value="Tela">
         <label for="formCheckTela">Tela</label>
       </fieldset>
 
@@ -154,20 +160,20 @@
             <div class="schedulingTimeFormItem">
                 <span>
                     <label>Dia</label> <br>
-                    <input type="date" class="selectDate">
+                    <input type="date" class="selectDate" name="Data" required>
                     <wbr>
                 </span>
                 <span>
                     <label>Horário</label> <br>
-                    <input type="time" list="hoursListFirstPeriod" min="06:00" max="22:00" class="FirstPeriodTime">
+                    <input type="time" list="hoursListFirstPeriod" min="06:00" max="22:00" class="FirstPeriodTime" name="Hora Início" required>
                     -
-                    <input type="time" list="hoursListSecondPeriod" class="SecondPeriodTime">
+                    <input type="time" list="hoursListSecondPeriod" class="SecondPeriodTime" name="Hora Fim" required>
                 </span>
             </div>
         </div>
       </fieldset>
       <div id="actionFormButtons">
-        <button id="clearForm" class="actionBtn clearBtn">Limpar Formulário</button>
+        <button id="clearForm" class="actionBtn clearBtn" type="reset">Limpar Formulário</button>
         <button id="genTemplate" class="actionBtn genTemplateBtn">Confirmar e Gerar template</button>
       </div>
       </form>
