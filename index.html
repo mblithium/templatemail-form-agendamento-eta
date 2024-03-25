@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de Agendamento de Equipamentos</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/moment.js" defer></script>
     <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="assets/logo-adelia.png">
-        
+        <img src="assets/logo-adelia.png"> <br>
+        <h1>Modelo de Agendamento - TI</h1>
     </header>
 
     <div id="modalResult">
@@ -26,13 +27,15 @@
     </div>
     
     <section>
-        <h1>Modelo de Agendamento - TI</h1>
         <form name="TI_scheduling" action="">
             <fieldset>
                 <legend>Professor</legend>
 
                 <label for="formTeacherName">Nome e Sobrenome</label> <br>
-                <input type="text" id="formTeacherName" name="Professor" required>
+                <input type="text" id="formTeacherName" name="Professor" placeholder="Digite seu nome aqui.">
+                    <br>
+                <label for="formTeacherEmail">E-mail (para confirmação).</label> <br>
+                <input type="email" id="formTeacherEmail" name="email" placeholder="email@dominio.com" required>
             </fieldset>
         <fieldset>
             <legend>Curso</legend>
@@ -42,43 +45,14 @@
 
                 <option selected disabled value="">Selecione</option>
 
-                <optgroup label="Fundamental">
-                    <option value="F1A1A">Fundamental 1 - 1° Ano A</option>
-                    <option value="F1A1B">Fundamental 1 - 1° Ano B</option>
-                    <option value="F1A1C">Fundamental 1 - 1° Ano C</option>
-                    <option value="F1A1D">Fundamental 1 - 1° Ano D</option>
-                    <option value="F1A2A">Fundamental 1 - 2° Ano A</option>
-                    <option value="F1A2B">Fundamental 1 - 2° Ano B</option>
-                    <option value="F1A2C">Fundamental 1 - 2° Ano C</option>
-                    <option value="F1A2D">Fundamental 1 - 2° Ano D</option>
-                    <option value="F1A3">Fundamental 1 - 3° Ano</option>
-                    <option value="F1A4">Fundamental 1 - 4° Ano</option>
-                    <option value="F1A5">Fundamental 1 - 5° Ano</option>
-                    <option value="F2A6">Fundamental 2 - 6° Ano</option>
-                    <option value="F2A7">Fundamental 2 - 7° Ano</option>
-                    <option value="F2A8">Fundamental 2 - 8° Ano</option>
-                    <option value="F2A9">Fundamental 2 - 9° Ano</option>
-                </optgroup>
+                <optgroup label="Fundamental"></optgroup>
 
-                <optgroup label="Ensino Médio">
-                    <option value="EM1">Ensino Médio - 1ª Série</option>
-                    <option value="EM2">Ensino Médio - 2ª Série</option>
-                    <option value="EM3">Ensino Médio - 3ª Série</option>
-                </optgroup>
+                <optgroup label="Ensino Médio"></optgroup>
 
-                <optgroup label="Cursos Técnicos">
-                    <option value="TADM">Técnico em Administração</option>
-                    <option value="TETC">Técnico em Eletrotécnica</option>
-                    <option value="TEFM">Técnico em Enfermagem</option>
-                    <option value="TFMA">Técnico em Farmácia</option>
-                    <option value="TIC">Técnico em Instrumentação Cirúrgica</option>
-                    <option value="TINF">Técnico em Informática</option>
-                    <option value="TLOG">Técnico em Logística</option>
-                    <option value="TPORT">Técnico em Portos</option>
-                    <option value="TRAD">Técnico em Radiologia</option>
-                    <option value="TST">Técnico em Segurança do Trabalho</option>
-                </optgroup>
+                <optgroup label="Cursos Técnicos"></optgroup>
             </select>
+
+             
         
             <br>
 
@@ -86,7 +60,7 @@
         
         <br>
         
-        <select id="formSala" name="sala">
+        <select id="formSala" name="Sala">
             <option selected disabled value="">Selecione</option>
 
             <optgroup label="Salas">
@@ -129,7 +103,7 @@
         </select>
         <br>
         </fieldset>
-      <fieldset>
+      <fieldset id="teste">
         <legend>Equipamentos</legend>  
 
         <input type="checkbox" id="formCheckProjector" name="Projetor" value="Projetor">
@@ -178,7 +152,7 @@
       </div>
       </form>
     </section>
-
+    <div id="statusCard"></div>
   <footer>
     <div>
         <p>Agende equipamentos para este mês e gere um modelo para ser enviado no webmail. <br>Note que essa ferramenta serve <strong><u>apenas para gerar o modelo</u></strong>, você ainda precisará copiar e enviar por e-mail.</p>
